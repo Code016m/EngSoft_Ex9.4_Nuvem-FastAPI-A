@@ -20,10 +20,9 @@ def salutation():
     return jsonify({"message": "Hello, %s!" % name})
 
 # PUT
-@app.route('/users/<name>/update', methods=['GET', 'POST'])
+@app.route('/users/<name>/update', methods=['GET', 'PUT'])
 def update_user(name):
-    return jsonify({"message": "User %s was updated" % name})
-
+    return jsonify({"message": "User %s updated!" % name})
 
 # DELETE
 @app.route("/users/<name>/delete", methods=["GET", "DELETE"])
